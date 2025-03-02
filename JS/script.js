@@ -25,10 +25,7 @@ taskButtons.forEach((button) => {
 
     event.target.classList.remove("bg-purple-600", "text-white");
 
-    event.target.classList.add(
-      "bg-gray-200",
-      "text-gray-700",
-      "cursor-not-allowed"
+    event.target.classList.add("bg-gray-200","text-gray-700","cursor-not-allowed"
     );
     const taskCard = event.target.closest(".task-card");
 
@@ -52,7 +49,7 @@ taskButtons.forEach((button) => {
 });
 
 const history = (message) => {
-  const currentTime = new Date().toLocaleString(); // Get current date and time
+  const currentTime = new Date().toLocaleString(); 
 
   const historyCreate = document.createElement("p");
 
@@ -72,18 +69,7 @@ clearHistory.addEventListener("click", () => {
 const themeButton = document.getElementById("theme-button");
 const body = document.body;
 
-const colors = [
-  "bg-red-200",
-  "bg-green-200",
-  "bg-blue-200",
-  "bg-yellow-200",
-  "bg-purple-200",
-  ,
-  "bg-pink-200",
-  "bg-indigo-200",
-  "bg-sky-200",
-  "bg-gray-400",
-];
+const colors = [ "bg-red-200","bg-green-200","bg-blue-200","bg-yellow-200","bg-purple-200","bg-pink-200", "bg-indigo-200","bg-sky-200","bg-gray-400", ];
 
 themeButton.addEventListener("click", function () {
   colors.forEach((color) => {
@@ -105,7 +91,7 @@ if (discover) {
   const back = document.getElementById("back-to-desk");
   if (back) {
     back.addEventListener("click", () => {
-      window.location.href = "prac-2.html";
+      window.location.href = "index.html";
     });
   }
 }
