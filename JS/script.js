@@ -47,7 +47,7 @@ taskButtons.forEach((button) => {
    
 
 
-    history(`You Have completed  The Task `); 
+    history(`"${taskCard.querySelector("h2").innerText}" You Have completed  The Task `); 
   });
 });
 
