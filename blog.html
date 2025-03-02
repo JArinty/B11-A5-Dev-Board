@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./Script/script.js" defer></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+    <header>
+        <nav
+            class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./assets/logo.png" alt="Logo" class="w-8 h-8">
+                <h1 class="text-2xl font-bold flex items-center ml-2"><span class="text-blue-600">Dev</span>Board</h1>
+            </div>
+            <div class="bg-blue-700 text-white p-2 rounded-md">
+                <button id="back-to-desk">Back To Desk</button>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById('back-to-desk').addEventListener('click', function () {
+                        window.location.href = 'index.html';
+                    });
+                });
+            </script>
+        </nav>
+    </header>
+
+    <main class="mt-8 space-y-3">
+        <h1 class="text-center text-2xl font-bold">Blog</h1>
+
+        <div class="space-y-3">
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg font-bold">Question-1: What
+                are the different ways to select an element in the DOM?</div>
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg"><strong>Answer:</strong>
+                <p>DOM stands for Document Object Model.
+                    It represent document logic tree structure. <br>There are way to select element in DOM:
+                <ul class="list-disc ml-10">
+                    <li>querySelector()</li>
+                    <li>querySelectorAll()</li>
+                    <li>getElementsByTagName()</li>
+                    <li>getElementsByClassName()</li>
+                    <li>getElementById()</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="space-y-3">
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg font-bold">Question-2: What
+                is the difference between innerHTML, innerText, and textContent?</div>
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg"><Strong>Answer:</Strong>
+                <p class="space-y-4 ">
+                    <strong>innerHtml</strong> :It is used to get set of HTML content. It access the Html tag with
+                    content. It can access style ,script,HTML tag with content. <br>
+                    <strong>innerText</strong> : It used to get text content of element.It dose not access the style and
+                    script.It returns the text content visible to the user. <br>
+                    <strong>textContent</strong>It is used to get HTML tags includes all text, even from hidden
+                    elements.It Returns all the text content inside the element, including hidden text .
+                </p>
+            </div>
+        </div>
+
+        <div class="space-y-3">
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg font-bold">Question-3: What
+                is event delegation in the DOM?</div>
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg"><strong>Answer:</strong>
+                <p>
+                    Event delegation is a technique use in event handaling.It add a single event listener to the parent
+                    element, and it captures events from its child elements.It optimized the code.
+                </p>
+            </div>
+        </div>
+
+        <div class="space-y-3">
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg font-bold">Question-4: What
+                is event bubbling in the DOM?</div>
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg"><strong>Answer:</strong>
+                <p>
+                    <b>Event Bubbling </b> is DOM Event Propagation where an event triggered on a child element
+                    propagates upward through its ancestors in the DOM.
+                </p>
+            </div>
+        </div>
+
+        <div class="space-y-3">
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg font-bold">Question-5: How do
+                you create, add, and remove elements using JavaScript?</div>
+            <div class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg"><Strong>Answer:</Strong>
+                <p>
+                <ul class="space-y-3"><h1 class="font-bold text-xl"> Create, Add, and Remove Elements using JavaScript</h1> 
+                    <li><b>Create an Element:</b> <br>
+                        const new = document.createElement("div");<br>
+                        new.textContent = "Create";</li>
+                    <li><b>Add to the DOM:</b> <br>
+                        const new = document.createElement("div");<br>
+                        document.body.appendChild(new);</li>
+                    <li>
+                        <b>Remove an Element:</b><br>
+                        const new = document.createElement("div");<br>
+                        new.remove();
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

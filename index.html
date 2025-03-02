@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body class="bg-gray-100 p-6">
+    <header class="">
+        <!-- Nav Bar -->
+        <nav
+            class="max-w-screen-xl mx-auto lg:px-28 bg-white p-6 rounded-lg shadow-lg flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./assets/logo.png" alt="" class="w-8 h-8">
+                <h1 class="text-2xl  flex items-center"> Dev<span class="font-bold" >Board</span></h1>
+            </div>
+
+            <!-- Task Process count -->
+            <div class="flex items-center space-x-4">
+                <div
+                 class="flex justify-between content-center items-center bg-blue-100 px-3 py-1 rounded-full text-sm space-x-3 increse-count">
+                    <img src="./assets/checkbox.png" alt="" class="w-4 h-4">
+                    <span id="increse-count" class="text-lg font-semibold task-count">23</span>
+                </div>
+
+                <!-- Color Changing Butoon -->
+                <button id="theme-button" class="w-6 h-6 rounded-full"><img src="./assets/theme-btn.png"
+                        alt=""></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="max-w-screen-xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-6">
+
+        <!-- Main Task Box -->
+        <div class="grid grid-cols-4 gap-4 mt-6">
+
+            <!-- Task assine logo -->
+            <div class="col-span-3 grid grid-cols-3 gap-4">
+                <div class="bg-[#F4F7FF] p-4 rounded-lg text-center">
+                    <div class="flex justify-between items-center lg:px-12">
+                        <div class="w-8 h-8 bg-white flex justify-center items-center rounded-full">
+                            <img src="./assets/checkbox.png" alt="" class="w-4 h-4">
+                        </div>
+
+                        <!-- task-count -->
+                        <div class="text-left">
+                            <p class="text-lg font-semibold">Task Assigned</p>
+                            <p id="decrese-count" class="text-3xl font-bold task-count">6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discover Something New Today! part -->
+                <div class="bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white p-4 rounded-lg text-center">
+                    <div class="flex justify-between items-center cursor-pointer" id="discover-new">
+                        <img src="./assets/board.png" alt="" class="w-12 h-12">
+                        <p class="font-semibold">Discover Something New Today!</p>
+                    </div>
+                </div>
+
+                <!-- date section -->
+                <div class="bg-[#F4F7FF] p-4 rounded-lg text-center">
+                    <div class="flex justify-between items-center lg:px-12">
+                        <div class="w-14 h-14 bg-white flex justify-center items-center rounded-full">
+                            <img src="./assets/calender.png" alt="" class="w-6 h-6">
+                        </div>
+                        <p class="text-start"> <span id="current-week" class="font-semibold text-lg"> ,</span> <br>
+                            <span id="current-month"class="font-bold text-xl"> ,</span>
+                            <span id="current-day"class="font-bold text-xl"></span>
+                            <span id="current-year"class="font-bold text-xl"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Task card section -->
+                <div class="col-span-3 grid grid-cols-3 gap-4">
+                    <!-- 6 complete card -->
+                    <div class="bg-[#F4F7FF] p-6 shadow rounded-lg border border-gray-200 space-y-3 task-card">
+                        <div class="w-2/6 h-[26px] bg-white text-center rounded-md ">
+                            <p class="text-sm font-medium">Shop Ease</p>
+                        </div>
+                        <h2 class="text-lg font-bold">Fix Mobile Button Issue</h2>
+                        <div class="bg-white p-4 max-w-xl rounded-md">
+                            <p class="text-sm text-gray-500 ">Debug using Chrome DevTools, check for overlapping
+                                elements, and ensure onClick works properly</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm ">Deadline: <br><b>2 March 2025</b></p>
+                            <button
+                                class="bg-purple-600 text-white px-4 py-2 rounded-lg mt-2 complete-btn">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F4F7FF] p-6 shadow rounded-lg border border-gray-200 space-y-3 task-card">
+                        <div class="w-2/6 h-[26px] bg-white text-center rounded-md ">
+                            <p class="text-sm font-medium">Soft Pay</p>
+                        </div>
+                        <h2 class="text-lg font-bold">Add Pay Success Modal</h2>
+                        <div class="bg-white p-4 max-w-xl rounded-md">
+                            <p class="text-sm text-gray-500 ">Debug using Chrome DevTools, check for overlapping
+                                elements, and ensure onClick works properly</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm ">Deadline: <br> <b>2 March 2025</b></p>
+                            <button
+                                class="bg-purple-600 text-white px-4 py-2 rounded-lg mt-2 complete-btn">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F4F7FF] p-6 shadow rounded-lg border border-gray-200 space-y-3 task-card">
+                        <div class="w-2/6 h-[26px] bg-white text-center rounded-md ">
+                            <p class="text-sm font-medium">Meta</p>
+                        </div>
+                        <h2 class="text-lg font-bold">Add new reaction</h2>
+                        <div class="bg-white p-4 max-w-xl rounded-md">
+                            <p class="text-sm text-gray-500 ">Debug using Chrome DevTools, check for overlapping
+                                elements, and ensure onClick works properly</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm ">Deadline: <br> <b>2 March 2025</b></p>
+                            <button
+                                class="bg-purple-600 text-white px-4 py-2 rounded-lg mt-2 complete-btn">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F4F7FF] p-6 shadow rounded-lg border border-gray-200 space-y-3 task-card">
+                        <div class="w-4/6 h-[26px] bg-white text-center rounded-md ">
+                            <p class="text-sm font-medium ">Programming Hero</p>
+                        </div>
+                        <h2 class="text-lg font-bold">Integrate AI Search
+                        </h2>
+                        <div class="bg-white p-4 max-w-xl rounded-md">
+                            <p class="text-sm text-gray-500 ">Debug using Chrome DevTools, check for overlapping
+                                elements, and ensure onClick works properly</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm ">Deadline: <br> <b>2 March 2025</b></p>
+                            <button
+                                class="bg-purple-600 text-white px-4 py-2 rounded-lg mt-2 complete-btn">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F4F7FF] p-6 shadow rounded-lg border border-gray-200 space-y-3 task-card">
+                        <div class="w-2/6 h-[26px] bg-white text-center rounded-md ">
+                            <p class="text-sm font-medium ">Google LLC</p>
+                        </div>
+                        <h2 class="text-lg font-bold">Review Ami Probashi Site</h2>
+                        <div class="bg-white p-4 max-w-xl rounded-md">
+                            <p class="text-sm text-gray-500 ">Debug using Chrome DevTools, check for overlapping
+                                elements, and ensure onClick works properly</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm ">Deadline: <br> <b>2 March 2025</b></p>
+                            <button
+                                class="bg-purple-600 text-white px-4 py-2 rounded-lg mt-2 complete-btn">Completed</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F4F7FF] p-6 shadow rounded-lg border border-gray-200 space-y-3 task-card">
+                        <div class="w-2/6 h-[26px] bg-white text-center rounded-md ">
+                            <p class="text-sm font-medium">Glassdoar</p>
+                        </div>
+                        <h2 class="text-lg font-bold">Improve Job searching </h2>
+                        <div class="bg-white p-4 max-w-xl rounded-md">
+                            <p class="text-sm text-gray-500 ">Debug using Chrome DevTools, check for overlapping
+                                elements, and ensure onClick works properly</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-sm ">Deadline: <br> <b>2 March 2025</b></p>
+                            <button
+                                class="bg-purple-600 text-white px-4 py-2 rounded-lg mt-2 complete-btn">Completed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="bg-gray-200 p-4 rounded-lg h-full">
+                    <p class="font-bold text-3xl text-center">Activity Log</p>
+                    <div class="mt-4"></div> 
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg w-full mt-4">Clear History</button>
+
+                </div>
+            </div>
+
+
+    </section>
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>
